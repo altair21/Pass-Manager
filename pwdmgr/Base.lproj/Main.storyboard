@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pwd2703" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="432575" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX5-9F-tOm">
+                                <rect key="frame" x="108" y="150" width="159" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="P7B-FN-dKC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="325423" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmU-Cm-0q4">
+                                <rect key="frame" x="141" y="234" width="93" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="pfL-UJ-P0H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4r-hC-6QG">
+                                <rect key="frame" x="46" y="537" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="TEZ-Vx-K1i"/>
+                                </constraints>
+                                <state key="normal" title="Undo"/>
+                                <connections>
+                                    <action selector="undoTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K1H-wL-R7z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFq-3V-ucc">
+                                <rect key="frame" x="283" y="537" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="CS9-k0-cZl"/>
+                                </constraints>
+                                <state key="normal" title="Jump"/>
+                                <connections>
+                                    <action selector="jumpTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5J9-9V-NAL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYW-ep-Il9">
+                                <rect key="frame" x="142" y="534" width="92" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="pcJ-fC-W9X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="genBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iC2-kv-hhA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dYW-ep-Il9" secondAttribute="bottom" constant="97" id="ACG-Tn-7VP"/>
+                            <constraint firstItem="kmU-Cm-0q4" firstAttribute="top" secondItem="SX5-9F-tOm" secondAttribute="bottom" constant="42" id="OBz-F5-xgF"/>
+                            <constraint firstItem="F4r-hC-6QG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="QGg-Ph-0pr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aFq-3V-ucc" secondAttribute="bottom" constant="100" id="QcY-38-QPE"/>
+                            <constraint firstItem="kmU-Cm-0q4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RNf-gq-1HM"/>
+                            <constraint firstItem="SX5-9F-tOm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e5o-6o-jb0"/>
+                            <constraint firstItem="SX5-9F-tOm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="130" id="kjI-oX-Fgi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F4r-hC-6QG" secondAttribute="bottom" constant="100" id="lNy-IL-cJ8"/>
+                            <constraint firstItem="dYW-ep-Il9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pEp-0F-jP2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aFq-3V-ucc" secondAttribute="trailing" constant="30" id="qOH-fF-mrx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="genBtn" destination="dYW-ep-Il9" id="QdF-gV-cUM"/>
+                        <outlet property="jumpBtn" destination="aFq-3V-ucc" id="rbe-Yd-AT8"/>
+                        <outlet property="label" destination="SX5-9F-tOm" id="m7J-94-HGG"/>
+                        <outlet property="preLabel" destination="kmU-Cm-0q4" id="WEq-ZY-Hhn"/>
+                        <outlet property="undoBtn" destination="F4r-hC-6QG" id="pMd-FF-5mB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
