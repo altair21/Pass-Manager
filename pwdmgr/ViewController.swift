@@ -21,6 +21,12 @@ class ViewController: UIViewController {
             if let pwd = newValue {
                 label.text = pwd
                 UserDefaults.standard.set(pwd, forKey: Keys.UserDefault.current)
+                
+                // remove out of date notifications
+                UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+                
+                addEverydayNoti()
+                addEveryWeekNoti()
             }
         }
         get {
@@ -77,12 +83,6 @@ class ViewController: UIViewController {
         let random = arc4random() % 1000000
         prePwd = curPwd
         curPwd = String(format: "%06d", random)
-        
-        // remove out of date notifications
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        
-        addEverydayNoti()
-        addEveryWeekNoti()
     }
     
     @IBAction func undoTapped(_ sender: Any) {
