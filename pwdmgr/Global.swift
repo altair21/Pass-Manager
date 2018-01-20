@@ -20,4 +20,13 @@ struct Identifier {
         static let everyday = "everyday"
         static let everyWeek = "everyWeek"
     }
+    
+    struct Region {
+        static let home = "home"
+    }
+}
+
+struct Location {   // 经纬度  Galaxy SOHO
+    static let latitude = 39.920344
+    static let longitude = 116.432945
 }
